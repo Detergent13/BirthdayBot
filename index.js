@@ -24,7 +24,7 @@ function main() {
         else if (msg.content.startsWith('b!birthday'))
             arg1 = msg.content.split(' ')[1];
             // regex magic to let us check if the arg matches mm/dd/yyyy roughly
-            if(arg1.match('\d{1,2}\/\d{1,2}\/\d{4}')) {
+            if(arg1.match('\d{1,2}/\d{1,2}/\d{4}')) {
                 datesplit = arg1.split('/');
                 if (parseInt(datesplit[0]) > 12 || parseInt(datesplit[1]) > 31 || parseInt(datesplit[2]) > Date.now().getFullYear())
                     msg.channel.send('Something is wrong with the format of your date. Please try again! (bounds)');
