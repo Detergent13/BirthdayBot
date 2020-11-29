@@ -27,7 +27,7 @@ function main() {
             if(arg1.match('\d{1,2}\/\d{1,2}\/\d{4}')) {
                 datesplit = arg1.split('/');
                 if (parseInt(datesplit[0]) > 12 || parseInt(datesplit[1]) > 31 || parseInt(datesplit[2]) > Date.now().getFullYear())
-                    msg.channel.send('Something is wrong with the format of your date. Please try again!');
+                    msg.channel.send('Something is wrong with the format of your date. Please try again! (bounds)');
                 else {
                     fs.readFile(fileName, function (err, data) {
                         let json = JSON.parse(data);
@@ -38,6 +38,6 @@ function main() {
                 }
             }
             else
-                msg.channel.send('Something is wrong with the format of your date. Please try again!');
+                msg.channel.send('Something is wrong with the format of your date. Please try again! (regex)');
     })
 }
