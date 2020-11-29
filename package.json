@@ -1,0 +1,16 @@
+{
+  "name": "birthdaybot",
+  "version": "1.0.0",
+  "description": "Discord birthday bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "detergent#2533",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "fs": "0.0.1-security"
+  }
+}
