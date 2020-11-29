@@ -13,7 +13,7 @@ function main() {
         console.log(`Logged in as $(client.user.tag)!`);
     })
 
-    client.on('ready' () => {
+    client.on('ready', () => {
         client.user.setActivity('for your birthday :\)', {type: 'WATCHING'})
     })
 
