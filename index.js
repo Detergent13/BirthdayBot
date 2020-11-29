@@ -26,7 +26,7 @@ function main() {
             // regex magic to let us check if the arg matches mm/dd/yyyy roughly
             if(arg1.match(/\d{1,2}\/\d{1,2}\/\d{4}/g)) {
                 datesplit = arg1.split('/');
-                if (parseInt(datesplit[0]) > 12 || parseInt(datesplit[1]) > 31 || parseInt(datesplit[2]) > Date.now().getFullYear())
+                if (parseInt(datesplit[0]) > 12 || parseInt(datesplit[1]) > 31 || (parseInt(datesplit[2]) > parseInt(new Date().getFullYear())))
                     msg.channel.send('Something is wrong with the format of your date. Please try again! (bounds)');
                 else {
                     fs.readFile(fileName, function (err, data) {
