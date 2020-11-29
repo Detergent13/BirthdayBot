@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const client = new Discord.Client();
-const fileName = './birthdays.json'
-const file = require(fileName)
+const fileName = './birthdays.json';
 
 client.login(process.env.BOT_TOKEN)
     .then(main, main)
