@@ -36,6 +36,7 @@ function main() {
         else if (msg.content.startsWith('b!birthday'))
             arg1 = msg.content.split(' ')[1];
             // regex magic to let us check if the arg matches mm/dd/yyyy roughly (possibly not necessary anymore with cron format/Date class- check if it verifies.
+            // just a thought- should probably add verification to make sure that you can't have multiple birthdays + a method to remove them eventually (but need to figure out json first)
             if(arg1.match(/\d{1,2}\/\d{1,2}\/\d{4}/g)) {
                 datesplit = arg1.split('/');
                 if (parseInt(datesplit[0]) > 12 || parseInt(datesplit[1]) > 31 || (parseInt(datesplit[2]) > parseInt(new Date().getFullYear())))
