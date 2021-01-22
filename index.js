@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const Schedule = require('node-schedule');
 const fs = require('fs');
 const client = new Discord.Client();
 const fileName = './birthdays.json';
@@ -6,6 +7,12 @@ const fileName = './birthdays.json';
 client.login(process.env.BOT_TOKEN)
     .then(main, main)
     .catch(console.error);
+
+// load up json? birthdays upon launch from file, create events for each of them
+
+function announceBirthday(user) {
+    // send message in channel (maybe create a new channel w/ perms?) saying that it's @user's birthday here
+
 
 function main() {
     client.on('ready', () => {
